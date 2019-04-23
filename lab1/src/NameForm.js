@@ -20,7 +20,7 @@ class NameForm extends React.Component {
         var hello = 'Hello, ' + this.state.value + '!';
         this.setState({name:hello});
         //alert('Hello, ' + this.state.value);
-        if (/[a-zA-Z]+/.test (this.state.value)) {
+        if (!/[^A-Za-z]+/.test (this.state.value)) {
           this.setState ({nameAvailable:true});
 
         }
